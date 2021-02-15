@@ -1,0 +1,56 @@
+.post {
+  margin: 50px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.post img {
+  width: 400px;
+  cursor: pointer;
+}
+.post .icon {
+  position: absolute;
+  display: inline-block;
+  width: 128px;
+  opacity: 0;
+  fill: red;
+}
+.post .icon.like {
+  animation: 2s like-heart-animation ease-in-out forwards;
+}
+.post p {
+  
+  margin-top: 10px;
+    font-family: cursive;
+    font-size:20px;
+    text-align: center;
+}
+@keyframes like-heart-animation {
+  0%,
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  15% {
+    opacity: 0.9;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  30% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  45%,
+  80% {
+    opacity: 0.9;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+body{
+    background: url(heart-1403474_1920.jpg) fixed center center;
+    background-size: cover;
+}
